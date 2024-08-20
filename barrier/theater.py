@@ -23,11 +23,9 @@ class Theater:
         for _ in range(movies):
             x, y = self.random_empty_cell()
             self.grid[x][y].append("M")
-            # self.barriers[x][y] = Barrier(1)
         for _ in range(popcorn):
             x, y = self.random_empty_cell()
             self.grid[x][y].append("P")
-            # self.barriers[x][y] = Barrier(1)
         for _ in range(obstacles):
             x, y = self.random_empty_cell()
             self.grid[x][y].append("O")

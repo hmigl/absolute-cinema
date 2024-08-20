@@ -43,7 +43,7 @@ def main():
     theater = Theater(GRID_SIZE)
     theater.place_items(movies=20, popcorn=30)
 
-    print_grid(theater.grid)
+    # print_grid(theater.grid)
 
     imdb_list = IMDbList(size=NUMBER_OF_PLAYERS)
     players = [Player(i, theater, imdb_list) for i in range(NUMBER_OF_PLAYERS)]
@@ -56,8 +56,6 @@ def main():
         for future in futures:
             future.result()
     winner(imdb_list)
-
-    print_grid(theater.grid)
 
 
 if __name__ == "__main__":
